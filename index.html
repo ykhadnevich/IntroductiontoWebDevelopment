@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Service Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form id="customer-service-form" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label class="form-label" for="name">Name:</label>
+            <input class="form-input" type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="phone">Phone:</label>
+            <input class="form-input" type="tel" id="phone" name="phone" onblur="validatePhone()" required>
+            <span id="phone-error" class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="email">Email:</label>
+<input class="form-input" type="email" id="email" name="email" onblur="validateEmail()" required>
+<span id="email-error" class="error-message"></span>
+</div>
+<div class="form-group">
+<label class="form-label" for="password">Password:</label>
+<input class="form-input" type="password" id="password" name="password" minlength="8" required>
+</div>
+<div class="form-group">
+<label class="form-label" for="food">Choose food:</label>
+<select class="form-input" id="food" name="food">
+<option value="pizza">Pizza</option>
+<option value="sushi">Sushi</option>
+<option value="tacos">Tacos</option>
+<option value="pasta">Pasta</option>
+<option value="burger">Burger</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="comments">Comments:</label>
+<textarea class="form-input" id="comments" name="comments"></textarea>
+</div>
+<div class="form-group">
+<input type="checkbox" id="agree" name="agree" required>
+<label class="form-label" for="agree">I agree to the terms and conditions</label>
+</div>
+<button class="form-button" type="submit">Submit</button>
+</form>
+
+</body>
+</html>
